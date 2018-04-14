@@ -8,7 +8,7 @@ TAG="4-alpine"
 DOCKER_IMG="$REPO:$TAG"
 
 #exist=`docker ps -a |grep $DOCKER_NAME`
-exist=`docker ps | awk '{if($NF=="'"$DOCKER_NAME"'"){print $NF}}'`
+exist=`docker ps -a| awk '{if($NF=="'"$DOCKER_NAME"'"){print $NF}}'`
 if [ -n "$exist" ]; then
    echo "exist docker name:$DOCKER_NAME, delete it"
    docker rm -f -v $DOCKER_NAME
