@@ -1,0 +1,18 @@
+1. 配置参数:
+HOST_PORT:宿主机的端口
+DOCKER_NAME: 启动docker容器的名称
+MYSQL_USER: 登录mysql的用户名
+MYSQL_PWD: 登录mysql的密码
+
+2. 其他
+docker内部存储数据的目录:/var/lib/mysql
+通过-e MYSQL_USER和-e MYSQL_ROOT_PASSWORD配置mysql的用户名和密码
+
+3. 登录方法
+mysql -h127.0.0.1 -P3307 -uroot -p666666
+注意:主机名不要设置为localhost
+
+4. 其他
+参考文档:https://hub.docker.com/r/library/mysql/
+镜像下载方法: docker pull mysql:5.7.21
+
